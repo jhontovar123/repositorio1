@@ -1,4 +1,5 @@
 import math
+print("El codigo ha cambiado")
 nombre = str(input("Coloque su nombre: "))
 print("Buenos días")
 print("Oraculo empieza su funcionamiento, ¿qué es lo que desea", nombre, "?")
