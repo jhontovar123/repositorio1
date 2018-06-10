@@ -1,35 +1,57 @@
-print("Seleccione su medida")
-print("1. metros")
-print("2. kilometros")
-print("3. centimetros")
-medida = int(input("Escriba el número de la medida que ha seleccionado:"))
-if medida == 1:
-  medida2 = "metros"
-elif medida == 2:
-  medida2 = "kilometros"
-elif medida == 3:
-  medida2 = "centimetros"
-valor = float(input("Escriba la cantidad que desee: "))
-print("Ha seleccionado", medida2)
-if medida == 1:
-  valor = valor * 1
-elif medida == 2:
-  valor = valor * 1000
-elif medida == 3:
-  valor = valor * 0.01
-print("Seleccione su medida")
-print("1. metros")
-print("2. kilometros")
-print("3. centimetros")
-medida = int(input("Escriba el número de la medida que ha seleccionado: "))
-if medida == 1:
-  valor = valor * 1
-  medida2 = "m"
-elif medida == 2:
-  valor = valor * 0.001
-  medida2 = "km"
-elif medida == 3:
-  valor = valor *100
-  medida2 = "cm"
-
-print("El valor es: ", valor, medida2)
+n = str(input("Ingrese la cantidad a convertir: "))
+m = 0
+metros = ["metros", "m", "Metros", "metro"]
+decimetros = ["decimetros", "decímetros", "Decimetros", "decímetros", "dm"]
+centimetros = ["centimetros", "centímetros", "Centímetros", "centimetros", "cm"]
+milimetros = ["milimetros", "Milimetros", "milímetros", "Milímetros", "mm"]
+decametros = ["decámetros", "decametros", "Decametros", "Decámetros", "Dm"]
+hectametros = ["hectametros", "hectámetros", "Hectametros", "Hectámetros", "Hm", "hm"]
+kilometros = ["kilometros", "Kilometros", "kilómetros", "Kilómetros", "Km", "km"]
+def conversor1(n):
+  n = n.replace(" ", ",")
+  n = n.split(",")
+  m = n[0]
+  n = n[1]
+  m = int(m)
+  if  n in metros:
+    m = m*1
+  elif n in decimetros:
+    m = m*0.1
+  elif n in centimetros:
+    m = m*0.01
+  elif n in milimetros:
+    m = m*0.001
+  elif n in decametros:
+    m = m*10
+  elif n in hectametros:
+    m = m*100
+  elif n in kilometros:
+    m = m*1000
+  llamar_conversor2(m)
+  return m
+def llamar_conversor2(m):
+  x = str(input("Escriba a que valor desea convertir: "))
+  if x in metros:
+    m = m*1
+    n = "metros"
+  elif x in decimetros:
+    m = m*10
+    n = "decímetros"
+  elif x in centimetros:
+    m = m*100
+    n = "centímetros"
+  elif x in milimetros:
+    m = m*1000
+    n = "milímetros"
+  elif x in decametros:
+    m = m*0.1
+    n = "decámetros"
+  elif x in hectametros:
+    m = m*0.01
+    n = "hectámetros"
+  elif x in kilometros:
+    m = m*0.001
+    n = "kilómetros"
+  print(m, n)
+  return m,n
+conversor1(n)
