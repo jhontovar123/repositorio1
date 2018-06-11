@@ -73,3 +73,20 @@ def conversor4(n):
    n= "kilogramos"
    print(m, n)
    return m,n
+°C=["C", "centígrados", "celcius","C"]
+°K=["°K","K","kelvin"]
+def conversor5(n):
+   n=int(input("Ingrese el valor a convertir:"))
+   if n in °C:
+   m= n+273
+   n= "°K"
+   print(m, n)
+   return m,n
+  
+def conversor6(n):
+   n=int(input("Ingrese el valor a convertir:"))
+   if n in °K:
+   m=n-273
+   n= "°C"
+   print(m, n)
+   return m,n
