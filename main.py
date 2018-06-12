@@ -1,5 +1,6 @@
 n = str(input("Ingrese la cantidad a convertir: "))
 m = 0
+print("prueba uno")
 metros = ["metros", "m", "Metros", "metro"]
 decimetros = ["decimetros", "decímetros", "Decimetros", "decímetros", "dm"]
 centimetros = ["centimetros", "centímetros", "Centímetros", "centimetros", "cm"]
