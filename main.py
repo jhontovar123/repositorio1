@@ -55,3 +55,38 @@ def llamar_conversor2(m):
   print(m, n)
   return m,n
 conversor1(n)
+
+kilogramos=["kilos", "kilógramos", "kg"]
+libras=["libras","libra","lb"]
+def conversor3(n):
+   n=int(input("Ingrese el valor a convertir:"))
+   if n in kilogramos:
+   m= n*2.20462
+   n= "Libras"
+   print(m, n)
+   return m,n
+  
+def conversor4(n):
+   n=int(input("Ingrese el valor a convertir:"))
+   if n in libras:
+   m= n/2.20462
+   n= "kilogramos"
+   print(m, n)
+   return m,n
+°C=["C", "centígrados", "celcius","C"]
+°K=["°K","K","kelvin"]
+def conversor5(n):
+   n=int(input("Ingrese el valor a convertir:"))
+   if n in °C:
+   m= n+273
+   n= "°K"
+   print(m, n)
+   return m,n
+  
+def conversor6(n):
+   n=int(input("Ingrese el valor a convertir:"))
+   if n in °K:
+   m=n-273
+   n= "°C"
+   print(m, n)
+   return m,n
