@@ -90,3 +90,22 @@ def conversor6(n):
    n= "°C"
    print(m, n)
    return m,n
+
+L=["Litros","Litro","L","litros","litro","l"]
+Oz=["Onzas","Onza","Oz","onzas","onza","oz"]
+def conversor7(n):
+  n=int(input("Ingrese el valor a convertir:"))
+   if n in L:
+   m=n*33.814
+   n= "Oz"
+   print(m, n)
+   return m,n
+def conversor8(n):
+   n=int(input("Ingrese el valor a convertir:"))
+   if n in Oz:
+   m=n/33.814
+   n= "L"
+   print(m, n)
+   return m,n
+
+  
